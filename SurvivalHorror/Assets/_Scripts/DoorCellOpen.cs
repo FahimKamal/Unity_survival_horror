@@ -37,6 +37,7 @@ public class DoorCellOpen : MonoBehaviour
         {
             actionDisplay.SetActive(true);
             actionText.SetActive(true);
+            actionText.GetComponent<Text>().text = "Open The Door";
             extraCross.SetActive(true);
         }
 

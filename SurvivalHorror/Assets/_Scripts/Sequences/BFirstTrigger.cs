@@ -10,6 +10,8 @@ public class BFirstTrigger : MonoBehaviour
     public GameObject textBox;
     public GameObject theMarker;
 
+    public AudioSource line03;
+
     private void OnTriggerEnter(Collider other)
     {
         //thePlayer.GetComponent<FirstPersonController>().enabled = false;
@@ -20,6 +22,7 @@ public class BFirstTrigger : MonoBehaviour
     {
         gameObject.GetComponent<BoxCollider>().enabled = false;
         textBox.GetComponent<Text>().text = "Looks like a weapon on that table.";
+        line03.Play();
         theMarker.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         textBox.GetComponent<Text>().text = "";
